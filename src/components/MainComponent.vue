@@ -8,15 +8,21 @@
                 <div class="found">
                     Found 30 cards
                 </div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero tempora quam. Nulla earum necessitatibus consequatur eaque dolorem, eum magni sequi aliquam quaerat mollitia labore illo, unde, consectetur voluptas aperiam.</div>
+                <div>
+                    <CardListComponent />
+                </div>
             </div>
         </div>
     </main>
 </template>
 
 <script>
+import CardListComponent from './CardsListComponent.vue'
 export default {
-    name: 'MainComponent'
+    name: 'MainComponent',
+    components: {
+        CardListComponent,
+    }
 }
 </script>
 

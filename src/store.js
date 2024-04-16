@@ -10,6 +10,7 @@ export const store = reactive({
             num: 20,
             offset: 0,
         }
-    }
+    },
+    cards: [],
     
 });
