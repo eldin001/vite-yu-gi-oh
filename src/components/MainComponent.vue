@@ -8,7 +8,7 @@
                 <div class="found">
                     Found 30 cards
                 </div>
-                <div>
+                <div class="d-flex">
                     <CardListComponent />
                 </div>
             </div>

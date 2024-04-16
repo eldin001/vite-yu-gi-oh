@@ -23,27 +23,22 @@ import MainComponent from './components/MainComponent.vue';
     },
     methods: {
       getCards(){
-        axios.get(this.store.apiUrl + thisStore.endPoint.cards, this.store.options).then((res) =>{
+        axios.get(this.store.apiUrl + this.store.endPoint.cards, this.store.options).then((res) =>{
           this.store.cards = res.data.data.map((card) => {
             return{
               id: card.id,
               title: card.name,
-              image: card.card_image[0].image.url,
+              image: card.card_images[0].image_url,
               status: card.archetype,
             }
           });
           this.store.total = res.data.meta.total_rows;
-        }).catch((error) => {
-          this.store.error.message = error.message;
-        })
-
+        });
       },
-      created() {
+    },
+    created() {
         this.getCards();
       },
-    }
-
-
   }
 </script>
 
